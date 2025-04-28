@@ -5,7 +5,7 @@ import * as handTrack from "handtrackjs";
 
 function App() {
   const videoRef = useRef(null);
-  const [model, setModel] = useState(null);
+  // const [model, setModel] = useState(null);
   const [backgroundColor, setBackgroundColor] = useState("#ffffff");
 
   useEffect(() => {
@@ -52,7 +52,7 @@ function App() {
 
     // Load the handtrack model
     handTrack.load(modelParams).then((loadedModel) => {
-      setModel(loadedModel);
+      // setModel(loadedModel);
       startVideo(loadedModel);
     });
   }, []);
